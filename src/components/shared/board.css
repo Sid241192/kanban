@@ -1,0 +1,154 @@
+.kanban-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.column-container {
+  margin: 1rem;
+}
+/* column style */
+.priority-heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.priority-content {
+  position: relative;
+}
+.priority-content span {
+  padding: 0.5rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+.priority-content img {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+.priority-content .status-circle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+/* ticket style */
+.ticket-column {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allow tickets to wrap to the next line */
+}
+
+.ticket-card {
+  position: relative;
+  background-color: white;
+  border: 1px solid #dfe1e6;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  /* width: calc(
+    50% - 20px
+  );  */
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.ticket-title {
+  color: #8e9195;
+}
+
+.ticket-priority {
+  padding: 3px 8px;
+  border-radius: 3px;
+  color: white;
+  position: relative;
+}
+.ticket-priority .status-circle {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.online {
+  background-color: green;
+}
+
+.offline {
+  background-color: red;
+}
+
+.ticket-priority img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.ticket-description {
+  color: #5b5959;
+  margin-bottom: 5px;
+}
+
+.ticket-footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.ticket-status,
+.ticket-assignee {
+  color: #858c97;
+  border: 1px solid rgb(195, 194, 194, 0.2);
+  padding: 3px;
+  font-size: small;
+  margin-right: 1rem;
+}
+
+.user-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 24px;
+  height: 24px;
+}
+
+.urgent {
+  background-color: #ff5630;
+}
+
+.high {
+  background-color: #ffab00;
+}
+
+.medium {
+  background-color: #36b37e;
+}
+
+.low {
+  background-color: #6554c0;
+}
+
+.no-priority {
+  background-color: #c1c7d0;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .kanban-container {
+    flex-direction: column;
+    height: 100%;
+    width: calc(100% - 20px);
+  }
+  .ticket-card {
+    width: calc(100% - 20px); /* Set tickets to full width on smaller screens */
+  }
+  .ticket-footer {
+    align-items: center;
+  }
+}

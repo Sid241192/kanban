@@ -1,0 +1,10 @@
+.page-wrapper {
+  background: #9e9e9e1f;
+  height: 100vh;
+  width: 100vw;
+}
+@media only screen and (max-width: 768px) {
+  .page-wrapper {
+    height: 100%;
+  }
+}
